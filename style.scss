@@ -1,0 +1,214 @@
+:root {
+  --primary-font: 'Raleway', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+  --third-font: 'Open Sans', sans-serif;
+  --primary-color: #FFCC00;
+  --secondary-color: #333333;
+  --third-color: #666666;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container {
+  padding-block: 121px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+header {
+  text-align: center;
+  $primary-font: "Raleway", sans-serif;
+  $secondary-font: "Roboto", sans-serif;
+  $primary-color: #FFCC00;
+  $secondary-color: #333333;
+  $third-color: #666666;
+
+  h4 {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #898F8F;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-block: 15px 40px;
+    font-family: var(--secondary-font);
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 66px;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    hr {
+      width: 210px;
+      margin: 0;
+      border: none;
+      height: 2px;
+      background-color: var(--primary-color);
+    }
+  }
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  $primary-font: "Raleway", sans-serif;
+  $secondary-font: "Roboto", sans-serif;
+  $primary-color: #FFCC00;
+  $secondary-color: #333333;
+  $third-color: #666666;
+
+  .card {
+    box-sizing: border-box;
+    padding: 80px 100px 80px 85px;
+
+    .wrapper {
+      border: 1px solid var(--primary-color);
+      padding: 15px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        width: calc(100% + 6px);
+        height: 230px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+
+    img {
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+      display: block;
+    }
+  }
+
+  .text {
+    box-sizing: border-box;
+    height: 560px;
+    padding: 70px 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+      font-family: var(--secondary-font);
+      font-weight: 900;
+      font-size: 36px;
+      color: var(--third-color);
+    }
+
+    hr {
+      margin: 0;
+      width: 100px;
+      border: none;
+      height: 1px;
+      background-color: var(--primary-color);
+      flex-shrink: 0;
+    }
+
+    h3 {
+      margin: 0;
+      font-family: var(--primary-font);
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: var(--third-color);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 5px;
+
+      li {
+        list-style: none;
+        border: 2px solid #cccccc;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          cursor: pointer;
+          filter: invert(100%);
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      font-family: var(--primary-font);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: var(--secondary-color);
+    }
+
+    div {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      button {
+        width: 118px;
+        height: 24px;
+        border: 1px solid var(--primary-color);
+        font-family: var(--third-font);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        color: var(--third-color);
+        background-color: #fff;
+        text-transform: uppercase;
+        padding: 5px 10px;
+
+        &:hover {
+          cursor: pointer;
+          color: #fff;
+          background-color: var(--primary-color);
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
